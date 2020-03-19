@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+    <Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+	     	<li Class="PatchOperationTest">
+		        <xpath>/Defs/ThingDef[defName = "sd_medicaddons_industrial_surg_instruments"]</xpath>
+	        </li>
+	        <li Class="PatchOperationAdd">
+		        <xpath>/Defs/ThingDef[defName = "TripleBed" or defName = "QuadBed" or defName = "TripleRoyalBed" or defName = "QuadRoyalBed" or defName = "PentaRoyalBed"]/comps/li[1]/linkableFacilities</xpath>
+		        <value>
+		            <li>sd_medicaddons_medieval_surg_washpan</li>
+					<li>sd_medicaddons_medieval_surg_instruments</li>
+					<li>sd_medicaddons_medieval_surg_lamp</li>
+					<li>sd_medicaddons_industrial_surg_instruments</li>
+					<li>sd_medicaddons_industrial_surg_lamp</li>
+					<li>sd_medicaddons_spacer_surg_vitalsmonitor</li>
+					<li>sd_medicaddons_spacer_surg_instruments</li>
+					<li>sd_medicaddons_spacer_surg_lamp</li>
+		        </value>
+	        </li>
+		</operations>
+	</Operation>	
+</Patch>
+

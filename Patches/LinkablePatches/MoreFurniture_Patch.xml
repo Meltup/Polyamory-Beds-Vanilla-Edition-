@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+    <Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+	     	<li Class="PatchOperationTest">
+		        <xpath>/Defs/ThingDef[defName = "Anon2EndTable"]</xpath>
+	        </li>
+	        <li Class="PatchOperationAdd">
+		        <xpath>/Defs/ThingDef[defName = "TripleBed" or defName = "QuadBed" or defName = "TripleRoyalBed" or defName = "QuadRoyalBed" or defName = "PentaRoyalBed"]/comps/li[1]/linkableFacilities</xpath>
+		        <value>
+		            <li>Anon2Dresser</li>
+			        <li>Anon2EndTable</li>
+                    <li>Anon2RoyalEndTable</li>
+                    <li>Anon2EndTableLight</li>
+                    <li>Anon2RoyalEndTableLight</li>
+		        </value>
+	        </li>
+		</operations>
+	</Operation>
+</Patch>
