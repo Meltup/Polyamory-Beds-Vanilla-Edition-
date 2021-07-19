@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Polyamory Beds (Vanilla Edition)</name>
+	<author>Meltup</author>
+	<supportedVersions>
+		<li>1.1</li>
+		<li>1.2</li>
+		<li>1.3</li>
+	</supportedVersions>
+	
+	<packageId>Meltup.PolyamoryBeds.Vanilla</packageId>
+	<loadAfter>
+	  <li>Ludeon.RimWorld</li>
+      <li>Ludeon.RimWorld.Royalty</li>
+    </loadAfter>
+	
+	<description>More beds for your polyamorous pawns!
+
+This mod is a spiritual successor of Polygamy Beds by Joseph with code being completely rewritten. 
+
+Features:
+     - Triple, quadra sleeping spots and bedrolls (avaliable from the start);
+     - Triple, quadra beds and royal beds (require 'Complex Furniture' to be researched, royal beds also require 8 skill in Construction);
+     - Penta royal bed (requires 'Complex Furniture' to be researched, 8 skill in Construction).
+Stats are carefully balanced to be in line with Vanilla beds, graphics is updated.
+
+Includes full built-in support for [JPT] Soft Warm Beds and Nano Repair Tech!
+ 
+Known issues
+     - Some other mods may interfere with game's miniaturisation mechanics thus making it possible to install/uninstall sleeping spots (and you may get also get messages about 'Outdoor penalty' when placing sleeping spots outside).
+Solution: move this mod higher up in the loading order.
+     - When three or more pawns share the same bed, the bedroom looses personal tags. That is a problem for jealous pawns and pawns with royal titles as they specifically require personal bedrooms to be satisfied.
+Solution: fight the Empire! Or consider that honour forbids pawns with titles to share bed with more than one person at a time.
+ 
+Please report any problems and/or inconsequences!
+	</description>
+</ModMetaData>
