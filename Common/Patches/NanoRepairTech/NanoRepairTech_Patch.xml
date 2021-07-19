@@ -1,0 +1,573 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+    <Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Nano Repair Tech</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<li Class="PatchOperationAdd">
+				    <xpath>/Defs</xpath>
+				    <value>
+					    <ThingDef ParentName="ArtableBedBase">
+					        <thingClass>Ogre.NanoRepairTech.NanoBed</thingClass>
+						    <defName>Ogre_NanoTech_TripleBed</defName>
+						    <label>nano tech triple bed</label>
+						    <description>A simple triple-wide bed that fits three people. Slowly repairs damage to equipped apparel/weaponry.</description>
+						    <graphicData>
+						    	<texPath>Bed3/Bed3</texPath>
+						    	<graphicClass>Graphic_Multi</graphicClass>
+						    	<shaderType>CutoutComplex</shaderType>
+						    	<drawSize>(3.05,2.05)</drawSize>
+						    	<damageData>
+					    			<rect>(0,0.05,3,1.95)</rect>
+					    		</damageData>
+					    	</graphicData>
+					    	<comps>
+					    		<li Class="CompProperties_AffectedByFacilities">
+					    			<linkableFacilities>
+					    				<li>EndTable</li>
+					    				<li>Dresser</li>
+					    			</linkableFacilities>
+					    		</li>
+					    		<li Class="CompProperties_Power">
+					    			<compClass>CompPowerTrader</compClass>
+					    			<basePowerConsumption>60</basePowerConsumption>
+					    			<shortCircuitInRain>false</shortCircuitInRain>
+					    		</li>
+					    		<li Class="CompProperties_Flickable"/>
+					    		<li Class="CompProperties_Refuelable">
+					    			<fuelConsumptionRate>0</fuelConsumptionRate>
+					    			<fuelCapacity>75.0</fuelCapacity>
+					    			<consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+					    			<fuelFilter>
+					    				<thingDefs>
+					    					<li>Ogre_NanoTechFuel</li>
+					    				</thingDefs>
+					    			</fuelFilter>
+					    		</li>
+					    	</comps>
+					    	<statBases>
+					    		<MaxHitPoints>260</MaxHitPoints>
+					    		<Flammability>1.0</Flammability>
+					    		<Beauty>3</Beauty>
+					    		<WorkToBuild>2610</WorkToBuild>
+					    		<Mass>120</Mass>
+					    		<Comfort>0.75</Comfort>
+					    		<BedRestEffectiveness>1</BedRestEffectiveness>
+					    		<ImmunityGainSpeedFactor>1.07</ImmunityGainSpeedFactor>
+					    		<SurgerySuccessChanceFactor>1</SurgerySuccessChanceFactor>
+					    		<Ogre_NanoApparelRate>0</Ogre_NanoApparelRate>
+					    		<Ogre_NanoWeaponsRate>0</Ogre_NanoWeaponsRate>
+					    	</statBases>
+					    	<tickerType>Rare</tickerType>
+					    	<size>(3,2)</size>
+					    	<stuffCategories>
+					    		<li>Metallic</li>
+					    		<li>Woody</li>
+					    		<li>Stony</li>
+					    	</stuffCategories>
+					    	<costStuffCount>225</costStuffCount>
+					    	<costList>
+					    		<ComponentIndustrial>6</ComponentIndustrial>
+					    		<Steel>110</Steel>
+					    		<Plasteel>45</Plasteel>
+					    	</costList>
+					    	<building>
+					    		<bed_showSleeperBody>False</bed_showSleeperBody>
+					    		<bed_healPerDay>4</bed_healPerDay>
+					    	</building>
+					    	<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+					    	<fillPercent>0.4</fillPercent>
+					    	<pathCost>60</pathCost>
+					    	<leaveResourcesWhenKilled>True</leaveResourcesWhenKilled>
+					    	<staticSunShadowHeight>0.17</staticSunShadowHeight>
+					    	<castEdgeShadows>True</castEdgeShadows>
+					    	<techLevel>Spacer</techLevel>
+					    	<researchPrerequisites>
+					    		<li>Ogre_NanoTech</li>
+					    	</researchPrerequisites>
+					    	<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+					    	<uiIconScale>0.90</uiIconScale>
+					    	<tradeability>None</tradeability>
+					    	<designationCategory>Ogre_NanoRepairTech_DesignationCategory</designationCategory>
+					    </ThingDef>	
+				    </value>
+			    </li>
+				
+				<li Class="PatchOperationAdd">
+				    <xpath>/Defs</xpath>
+				    <value>
+				     	<ThingDef ParentName="ArtableBedBase">
+					    	<thingClass>Ogre.NanoRepairTech.NanoBed</thingClass>
+					    	<defName>Ogre_NanoTech_QuadBed</defName>
+					    	<label>nano tech quadra bed</label>
+					    	<description>A simple quadra-wide bed that fits four people. Slowly repairs damage to equipped apparel/weaponry.</description>
+					    	<graphicData>
+					    		<texPath>Bed4/Bed4</texPath>
+					    		<graphicClass>Graphic_Multi</graphicClass>
+					    		<shaderType>CutoutComplex</shaderType>
+					    		<drawSize>(4.05,2.05)</drawSize>
+					    		<damageData>
+					    			<rect>(0,0.05,4,1.95)</rect>
+					    		</damageData>
+					    	</graphicData>
+					    	<comps>
+					    		<li Class="CompProperties_AffectedByFacilities">
+					    			<linkableFacilities>
+					    				<li>EndTable</li>
+					    				<li>Dresser</li>
+					    			</linkableFacilities>
+					    		</li>
+					    		<li Class="CompProperties_Power">
+					    			<compClass>CompPowerTrader</compClass>
+					    			<basePowerConsumption>60</basePowerConsumption>
+					    			<shortCircuitInRain>false</shortCircuitInRain>
+					    		</li>
+					    		<li Class="CompProperties_Flickable"/>
+					    		<li Class="CompProperties_Refuelable">
+					    			<fuelConsumptionRate>0</fuelConsumptionRate>
+					    			<fuelCapacity>100.0</fuelCapacity>
+					    			<consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+					    			<fuelFilter>
+					    				<thingDefs>
+					    					<li>Ogre_NanoTechFuel</li>
+					    				</thingDefs>
+					    			</fuelFilter>
+					    		</li>
+					    	</comps>
+					    	<statBases>
+					    		<MaxHitPoints>320</MaxHitPoints>
+					    		<Flammability>1.0</Flammability>
+					    		<Beauty>4</Beauty>
+					    		<WorkToBuild>3480</WorkToBuild>
+					    		<Mass>155</Mass>
+					    		<Comfort>0.75</Comfort>
+					    		<BedRestEffectiveness>1</BedRestEffectiveness>
+					    		<ImmunityGainSpeedFactor>1.07</ImmunityGainSpeedFactor>
+					    		<SurgerySuccessChanceFactor>1</SurgerySuccessChanceFactor>
+					    		<Ogre_NanoApparelRate>0</Ogre_NanoApparelRate>
+					    		<Ogre_NanoWeaponsRate>0</Ogre_NanoWeaponsRate>
+					    	</statBases>
+					    	<tickerType>Rare</tickerType>
+					    	<size>(4,2)</size>
+					    	<stuffCategories>
+					    		<li>Metallic</li>
+					    		<li>Woody</li>
+					    		<li>Stony</li>
+					    	</stuffCategories>
+					    	<costStuffCount>300</costStuffCount>
+					    	<costList>
+					    		<ComponentIndustrial>8</ComponentIndustrial>
+					    		<Steel>150</Steel>
+					    		<Plasteel>60</Plasteel>
+					    	</costList>
+					    	<building>
+					    		<bed_showSleeperBody>False</bed_showSleeperBody>
+					    		<bed_healPerDay>4</bed_healPerDay>
+					    	</building>
+					    	<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+					    	<fillPercent>0.4</fillPercent>
+					    	<pathCost>60</pathCost>
+					    	<leaveResourcesWhenKilled>True</leaveResourcesWhenKilled>
+					    	<staticSunShadowHeight>0.17</staticSunShadowHeight>
+					    	<castEdgeShadows>True</castEdgeShadows>
+					    	<techLevel>Spacer</techLevel>
+					    	<researchPrerequisites>
+					    		<li>Ogre_NanoTech</li>
+					    	</researchPrerequisites>
+					    	<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+					    	<uiIconScale>0.90</uiIconScale>
+					    	<tradeability>None</tradeability>
+					    	<designationCategory>Ogre_NanoRepairTech_DesignationCategory</designationCategory>
+				    	</ThingDef>
+				    </value>
+			    </li>
+				
+				<li Class="PatchOperationAdd">
+				    <xpath>/Defs</xpath>
+				    <value>
+				     	<ThingDef ParentName="ArtableBedBase">
+					    <thingClass>Ogre.NanoRepairTech.NanoBed</thingClass>
+					    <defName>Ogre_NanoTech_TripleRoyalBed</defName>
+				    	<label>nano tech triple royal bed</label>
+				    	<description>A luxurious gold-inlaid bed fit for the highborn. Very comfy and beautiful. Fits three. Slowly repairs damage to equipped apparel/weaponry.</description>
+				    	<graphicData>
+				    		<texPath>RBed3/RBed3</texPath>
+				    		<graphicClass>Graphic_Multi</graphicClass>
+				    		<shaderType>CutoutComplex</shaderType>
+				    		<drawSize>(3.05,2.05)</drawSize>
+				    		<damageData>
+				    			<rect>(0,0.05,3,1.95)</rect>
+				    		</damageData>
+				    	</graphicData>
+				    	<comps>
+				    		<li Class="CompProperties_AffectedByFacilities">
+				    			<linkableFacilities>
+				    				<li>EndTable</li>
+				    				<li>Dresser</li>
+				    			</linkableFacilities>
+				    		</li>
+				    		<li Class="CompProperties_Power">
+				    			<compClass>CompPowerTrader</compClass>
+				    			<basePowerConsumption>60</basePowerConsumption>
+				    			<shortCircuitInRain>false</shortCircuitInRain>
+				    		</li>
+				    		<li Class="CompProperties_Flickable"/>
+				    		<li Class="CompProperties_Refuelable">
+				    			<fuelConsumptionRate>0</fuelConsumptionRate>
+				    			<fuelCapacity>75.0</fuelCapacity>
+				    			<consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+				    			<fuelFilter>
+				    				<thingDefs>
+				    					<li>Ogre_NanoTechFuel</li>
+				    				</thingDefs>
+				    			</fuelFilter>
+				    		</li>
+				    	</comps>
+				    	<statBases>
+				    		<MaxHitPoints>260</MaxHitPoints>
+				    		<Flammability>1.0</Flammability>
+				    		<WorkToBuild>72000</WorkToBuild>
+				    		<Mass>130</Mass>
+				    		<Beauty>80</Beauty>
+				    		<BedRestEffectiveness>1.05</BedRestEffectiveness>
+				    		<Comfort>0.90</Comfort>
+				    		<ImmunityGainSpeedFactor>1.07</ImmunityGainSpeedFactor>
+				    		<SurgerySuccessChanceFactor>1</SurgerySuccessChanceFactor>
+				    		<Ogre_NanoApparelRate>0</Ogre_NanoApparelRate>
+				    		<Ogre_NanoWeaponsRate>0</Ogre_NanoWeaponsRate>
+				    	</statBases>
+				    	<tickerType>Rare</tickerType>
+				    	<size>(3,2)</size>
+				    	<stuffCategories>
+				    		<li>Metallic</li>
+				    		<li>Woody</li>
+				    		<li>Stony</li>
+				    	</stuffCategories>
+				    	<costStuffCount>330</costStuffCount>
+				    	<costList>
+				    		<Gold>75</Gold>
+				    		<ComponentIndustrial>6</ComponentIndustrial>
+				    		<Steel>110</Steel>
+				    		<Plasteel>45</Plasteel>
+				    	</costList>
+				    	<building>
+				    		<bed_showSleeperBody>False</bed_showSleeperBody>
+				    		<bed_healPerDay>3</bed_healPerDay>
+				    	</building>
+				    	<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+				    	<fillPercent>0.4</fillPercent>
+				    	<pathCost>60</pathCost>
+				    	<leaveResourcesWhenKilled>True</leaveResourcesWhenKilled>
+				    	<staticSunShadowHeight>0.17</staticSunShadowHeight>
+				    	<castEdgeShadows>True</castEdgeShadows>
+				    	<techLevel>Spacer</techLevel>
+				    	<researchPrerequisites>
+				    		<li>Ogre_NanoTech</li>
+				    	</researchPrerequisites>
+				    	<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+				    	<uiIconScale>0.90</uiIconScale>
+				    	<tradeability>None</tradeability>
+				    	<designationCategory>Ogre_NanoRepairTech_DesignationCategory</designationCategory>
+				        </ThingDef>
+				    </value>
+			    </li>
+				
+				<li Class="PatchOperationAdd">
+				    <xpath>/Defs</xpath>
+				    <value>
+					    <ThingDef ParentName="ArtableBedBase">
+		                <thingClass>Ogre.NanoRepairTech.NanoBed</thingClass>
+				    	<defName>Ogre_NanoTech_QuadRoyalBed</defName>
+				    	<label>nano tech quadra royal bed</label>
+				    	<description>A luxurious gold-inlaid bed fit for the highborn. Very comfy and beautiful. Fits four. Slowly repairs damage to equipped apparel/weaponry.</description>
+				    	<graphicData>
+				    		<texPath>RBed4/RBed4</texPath>
+				    		<graphicClass>Graphic_Multi</graphicClass>
+				    		<shaderType>CutoutComplex</shaderType>
+				    		<drawSize>(4.05,2.05)</drawSize>
+				    		<damageData>
+				    			<rect>(0,0.05,4,1.95)</rect>
+				    		</damageData>
+				    	</graphicData>
+				    	<comps>
+				    		<li Class="CompProperties_AffectedByFacilities">
+				    			<linkableFacilities>
+				    				<li>EndTable</li>
+				    				<li>Dresser</li>
+				    			</linkableFacilities>
+				    		</li>
+				    		<li Class="CompProperties_Power">
+				    			<compClass>CompPowerTrader</compClass>
+				    			<basePowerConsumption>60</basePowerConsumption>
+				    			<shortCircuitInRain>false</shortCircuitInRain>
+				    		</li>
+				    		<li Class="CompProperties_Flickable"/>
+				    		<li Class="CompProperties_Refuelable">
+				    			<fuelConsumptionRate>0</fuelConsumptionRate>
+				    			<fuelCapacity>100.0</fuelCapacity>
+				    			<consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+				    			<fuelFilter>
+				    				<thingDefs>
+				    					<li>Ogre_NanoTechFuel</li>
+				    				</thingDefs>
+				    			</fuelFilter>
+				    		</li>
+				    	</comps>
+				    	<statBases>
+				    		<MaxHitPoints>320</MaxHitPoints>
+				    		<Flammability>1.0</Flammability>
+				    		<WorkToBuild>94000</WorkToBuild>
+				    		<Mass>170</Mass>
+				    		<Beauty>85</Beauty>
+				    		<BedRestEffectiveness>1.05</BedRestEffectiveness>
+				    		<Comfort>0.90</Comfort>
+				    		<ImmunityGainSpeedFactor>1.07</ImmunityGainSpeedFactor>
+				    		<SurgerySuccessChanceFactor>1</SurgerySuccessChanceFactor>
+				    		<Ogre_NanoApparelRate>0</Ogre_NanoApparelRate>
+				    		<Ogre_NanoWeaponsRate>0</Ogre_NanoWeaponsRate>
+				    	</statBases>
+				    	<tickerType>Rare</tickerType>
+				    	<size>(4,2)</size>
+				    	<stuffCategories>
+				    		<li>Metallic</li>
+				    		<li>Woody</li>
+				    		<li>Stony</li>
+				    	</stuffCategories>
+				    	<costStuffCount>440</costStuffCount>
+				    	<costList>
+				    		<Gold>100</Gold>
+				    		<ComponentIndustrial>8</ComponentIndustrial>
+				    		<Steel>150</Steel>
+				    		<Plasteel>60</Plasteel>
+				    	</costList>
+				    	<building>
+				    		<bed_showSleeperBody>False</bed_showSleeperBody>
+				    		<bed_healPerDay>3</bed_healPerDay>
+				    	</building>
+				    	<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+				    	<fillPercent>0.4</fillPercent>
+				    	<pathCost>60</pathCost>
+				    	<leaveResourcesWhenKilled>True</leaveResourcesWhenKilled>
+				    	<staticSunShadowHeight>0.17</staticSunShadowHeight>
+				    	<castEdgeShadows>True</castEdgeShadows>
+				    	<techLevel>Spacer</techLevel>
+				    	<researchPrerequisites>
+				    		<li>Ogre_NanoTech</li>
+				    	</researchPrerequisites>
+				    	<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+				    	<uiIconScale>0.90</uiIconScale>
+				    	<tradeability>None</tradeability>
+				    	<designationCategory>Ogre_NanoRepairTech_DesignationCategory</designationCategory>
+			    	    </ThingDef>
+				    </value>
+			    </li>
+				
+				<li Class="PatchOperationAdd">
+				    <xpath>/Defs</xpath>
+				    <value>
+					    <ThingDef ParentName="ArtableBedBase">
+				    	<thingClass>Ogre.NanoRepairTech.NanoBed</thingClass>
+				    	<defName>Ogre_NanoTech_PentaRoyalBed</defName>
+				    	<label>nano tech penta royal bed</label>
+				    	<description>A luxurious gold-inlaid bed fit for the highborn. Very comfy and beautiful. Fits five. Slowly repairs damage to equipped apparel/weaponry.</description>
+				    	<graphicData>
+				    		<texPath>RBed5/RBed5</texPath>
+				    		<graphicClass>Graphic_Multi</graphicClass>
+				    		<shaderType>CutoutComplex</shaderType>
+				    		<drawSize>(5.05,2.05)</drawSize>
+				    		<damageData>
+				    			<rect>(0,0.05,5,1.95)</rect>
+				    		</damageData>
+				    	</graphicData>
+				    	<comps>
+				    		<li Class="CompProperties_AffectedByFacilities">
+				    			<linkableFacilities>
+				    				<li>EndTable</li>
+				    				<li>Dresser</li>
+				    			</linkableFacilities>
+				    		</li>
+				    		<li Class="CompProperties_Power">
+				    			<compClass>CompPowerTrader</compClass>
+				    			<basePowerConsumption>60</basePowerConsumption>
+				    			<shortCircuitInRain>false</shortCircuitInRain>
+				    		</li>
+				    		<li Class="CompProperties_Flickable"/>
+				    		<li Class="CompProperties_Refuelable">
+				    			<fuelConsumptionRate>0</fuelConsumptionRate>
+				    			<fuelCapacity>125.0</fuelCapacity>
+				    			<consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+				    			<fuelFilter>
+				    				<thingDefs>
+				    					<li>Ogre_NanoTechFuel</li>
+				    				</thingDefs>
+				    			</fuelFilter>
+				    		</li>
+				    	</comps>
+				    	<statBases>
+				    		<MaxHitPoints>380</MaxHitPoints>
+				    		<Flammability>1.0</Flammability>
+				    		<WorkToBuild>116000</WorkToBuild>
+				    		<Mass>210</Mass>
+				    		<Beauty>90</Beauty>
+				    		<BedRestEffectiveness>1.05</BedRestEffectiveness>
+				    		<Comfort>0.90</Comfort>
+				    		<ImmunityGainSpeedFactor>1.07</ImmunityGainSpeedFactor>
+				    		<SurgerySuccessChanceFactor>1</SurgerySuccessChanceFactor>
+				    		<Ogre_NanoApparelRate>0</Ogre_NanoApparelRate>
+				    		<Ogre_NanoWeaponsRate>0</Ogre_NanoWeaponsRate>
+				    	</statBases>
+				    	<tickerType>Rare</tickerType>
+				    	<size>(5,2)</size>
+				    	<stuffCategories>
+				    		<li>Metallic</li>
+				    		<li>Woody</li>
+				    		<li>Stony</li>
+				    	</stuffCategories>
+				    	<costStuffCount>550</costStuffCount>
+				    	<costList>
+				    		<Gold>125</Gold>
+				    		<ComponentIndustrial>10</ComponentIndustrial>
+				    		<Steel>190</Steel>
+				    		<Plasteel>75</Plasteel>
+				    	</costList>
+				    	<building>
+				    		<bed_showSleeperBody>False</bed_showSleeperBody>
+				    		<bed_healPerDay>3</bed_healPerDay>
+				    	</building>
+				    	<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+				    	<fillPercent>0.4</fillPercent>
+				    	<pathCost>60</pathCost>
+				    	<leaveResourcesWhenKilled>True</leaveResourcesWhenKilled>
+				    	<staticSunShadowHeight>0.17</staticSunShadowHeight>
+				    	<castEdgeShadows>True</castEdgeShadows>
+			    		<techLevel>Spacer</techLevel>
+			    		<researchPrerequisites>
+			    			<li>Ogre_NanoTech</li>
+			    		</researchPrerequisites>
+			    		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+			    		<uiIconScale>0.90</uiIconScale>
+			    		<tradeability>None</tradeability>
+			    		<designationCategory>Ogre_NanoRepairTech_DesignationCategory</designationCategory>
+			    	    </ThingDef>
+				    </value>
+			    </li>
+				
+				<!-- PATCHING LINKABLES -->
+				<li Class="PatchOperationSequence">
+			        <success>Always</success>
+			        <operations>
+			    		<li Class="PatchOperationTest">
+			     			<xpath>/Defs/ThingDef[defName = "Anon2EndTable"]</xpath>
+			    		</li>
+			   			<li Class="PatchOperationAdd">
+						    <xpath>/Defs/ThingDef[defName = "Ogre_NanoTech_TripleBed" or defName = "Ogre_NanoTech_QuadBed" or defName = "Ogre_NanoTech_TripleRoyalBed" or defName = "Ogre_NanoTech_QuadRoyalBed" or defName = "Ogre_NanoTech_PentaRoyalBed"]/comps/li[@Class = "CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+				            <value>
+							    <li>Anon2Dresser</li>
+					 		   <li>Anon2EndTable</li>
+					 		   <li>Anon2RoyalEndTable</li>
+					 		   <li>Anon2EndTableLight</li>
+					 		   <li>Anon2RoyalEndTableLight</li>
+				  	        </value>
+			   			</li>
+		   			</operations>
+		        </li>
+
+		        <li Class="PatchOperationSequence">
+		        	<success>Always</success>
+		        	<operations>
+		            	<li Class="PatchOperationTest">
+			            	<xpath>/Defs/ThingDef[defName = "sd_medicaddons_industrial_surg_instruments"]</xpath>
+			            </li>
+			            <li Class="PatchOperationAdd">
+			            	<xpath>/Defs/ThingDef[defName = "Ogre_NanoTech_TripleBed" or defName = "Ogre_NanoTech_QuadBed" or defName = "Ogre_NanoTech_TripleRoyalBed" or defName = "Ogre_NanoTech_QuadRoyalBed" or defName = "Ogre_NanoTech_PentaRoyalBed"]/comps/li[@Class = "CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+			            	<value>
+			            		<li>sd_medicaddons_medieval_surg_washpan</li>
+								<li>sd_medicaddons_medieval_surg_instruments</li>
+								<li>sd_medicaddons_medieval_surg_lamp</li>
+								<li>sd_medicaddons_industrial_surg_instruments</li>
+								<li>sd_medicaddons_industrial_surg_lamp</li>
+								<li>sd_medicaddons_spacer_surg_vitalsmonitor</li>
+								<li>sd_medicaddons_spacer_surg_instruments</li>
+								<li>sd_medicaddons_spacer_surg_lamp</li>
+							</value>
+						</li>
+		   		    </operations>
+				</li>
+
+				<li Class="PatchOperationSequence">
+					<success>Always</success>
+					<operations>
+						<li Class="PatchOperationTest">
+							<xpath>/Defs/ThingDef[defName = "RGK_Dresser"]</xpath>
+						</li>
+						<li Class="PatchOperationAdd">
+							<xpath>/Defs/ThingDef[defName = "Ogre_NanoTech_TripleBed" or defName = "Ogre_NanoTech_QuadBed" or defName = "Ogre_NanoTech_TripleRoyalBed" or defName = "Ogre_NanoTech_QuadRoyalBed" or defName = "Ogre_NanoTech_PentaRoyalBed"]/comps/li[@Class = "CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+							<value>
+								<li>RGK_Dresser</li>
+								<li>RGK_EndTable</li>
+								<li>RGK_EndTableWithLamp</li>
+								<li>RGK_EndTableWithLampE</li>
+	     						<li>WardrobeA</li>
+								<li>WardrobeB</li>
+								<li>GL_Teddy</li>
+							</value>
+						</li>
+		  		    </operations>
+				</li>
+
+				<li Class="PatchOperationSequence">
+					<success>Always</success>
+					<operations>
+	     				<li Class="PatchOperationTest">
+		 			       <xpath>/Defs/ThingDef[defName = "SadjuukFurnitureAA"]</xpath>
+	     			    </li>
+	     			    <li Class="PatchOperationAdd">
+					        <xpath>/Defs/ThingDef[defName = "Ogre_NanoTech_TripleBed" or defName = "Ogre_NanoTech_QuadBed" or defName = "Ogre_NanoTech_TripleRoyalBed" or defName = "Ogre_NanoTech_QuadRoyalBed" or defName = "Ogre_NanoTech_PentaRoyalBed"]/comps/li[@Class = "CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+		 			        <value>
+		          			    <li>SadjuukFurnitureAA</li>
+				    			<li>SadjuukFurnitureBA</li>
+				   				<li>SadjuukFurnitureAB</li>
+				    			<li>SadjuukFurnitureBB</li>
+				    			<li>SadjuukFurnitureAC</li>
+				    			<li>SadjuukFurnitureBC</li>
+		        			</value>
+	        			</li>
+		   		    </operations>
+		        </li>
+
+				<li Class="PatchOperationFindMod">
+				    <mods>
+					    <li>Vanilla Furniture Expanded</li>
+		   		    </mods>
+		   		    <match Class="PatchOperationAdd">
+		     		   <xpath>/Defs/ThingDef[defName = "Ogre_NanoTech_TripleBed" or defName = "Ogre_NanoTech_QuadBed" or defName = "Ogre_NanoTech_TripleRoyalBed" or defName = "Ogre_NanoTech_QuadRoyalBed" or defName = "Ogre_NanoTech_PentaRoyalBed"]/comps/li[@Class = "CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+		     		   <value>
+		      		        <li>Table_RoyalDresser</li>
+		        		    <li>Table_RoyalEndTable</li>
+		        		    <li>Table_Wardrobe</li>
+		        		</value>
+	        		</match>
+				</li>
+				
+				<li Class="PatchOperationFindMod">
+				    <mods>
+					    <li>Vanilla Furniture Expanded - Spacer Module</li>
+		   		    </mods>
+		   		    <match Class="PatchOperationAdd">
+		     		   <xpath>/Defs/ThingDef[defName = "Ogre_NanoTech_TripleBed" or defName = "Ogre_NanoTech_QuadBed" or defName = "Ogre_NanoTech_TripleRoyalBed" or defName = "Ogre_NanoTech_QuadRoyalBed" or defName = "Ogre_NanoTech_PentaRoyalBed"]/comps/li[@Class = "CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+		     		    <value>
+		      		        <li>Table_IlluminatedEndTable</li>
+				            <li>Table_IlluminatedDresser</li>
+		        		</value>
+	        		</match>
+				</li>
+				<!-- END OF PATCHING LINKABLES -->
+				
+			</operations>
+		</match>
+	</Operation>
+</Patch>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+    <Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Furniture Expanded - Spacer Module</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<li Class="PatchOperationAdd">
+		            <xpath>/Defs/ThingDef[defName = "TripleBed" or defName = "QuadBed" or defName = "TripleRoyalBed" or defName = "QuadRoyalBed" or defName = "PentaRoyalBed"]/comps/li[1]/linkableFacilities</xpath>
+		            <value>
+		                <li>Table_IlluminatedEndTable</li>
+				        <li>Table_IlluminatedDresser</li>
+		            </value>
+	            </li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>

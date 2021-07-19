@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Polyamory Beds (Vanilla Edition) -->
+
+  <TripleSleepingSpot.label>三人睡眠点</TripleSleepingSpot.label>
+  <TripleSleepingSpot.description>在地板上指定给三个人一起睡觉的位置。很不舒服。</TripleSleepingSpot.description>
+
+  <QuadSleepingSpot.label>四人睡眠点</QuadSleepingSpot.label>
+  <QuadSleepingSpot.description>在地板上指定给四个人一起睡觉的位置。很不舒服。</QuadSleepingSpot.description>
+
+  <BedrollTriple.label>三人睡袋</BedrollTriple.label>
+  <BedrollTriple.description>铺在地上的三人睡袋，通常用布或皮革缝制，也经常会用动物毛织成。轻便，可以卷起便于运输，但确实不如传统床那么舒服。</BedrollTriple.description>
+
+  <BedrollQuad.label>四人睡袋</BedrollQuad.label>
+  <BedrollQuad.description>铺在地上的四人睡袋，通常用布或皮革缝制，也经常会用动物毛织成。轻便，可以卷起便于运输，但确实不如传统床那么舒服。</BedrollQuad.description>
+
+  <TripleBed.label>普通三人床</TripleBed.label>
+  <TripleBed.description>一张适合三个人使用的普通三人床。</TripleBed.description>
+
+  <QuadBed.label>普通四人床</QuadBed.label>
+  <QuadBed.description>一张适合四个人使用的普通四人床。</QuadBed.description>
+
+  <TripleRoyalBed.label>豪华三人床</TripleRoyalBed.label>
+  <TripleRoyalBed.description>一张给贵族使用的豪华的，镶金边的床。非常舒适和漂亮。它本身就是一件艺术品。适合三人同眠。</TripleRoyalBed.description>
+
+  <QuadRoyalBed.label>豪华四人床</QuadRoyalBed.label>
+  <QuadRoyalBed.description>一张给贵族使用的豪华的，镶金边的床。非常舒适和漂亮。它本身就是一件艺术品。适合四人同眠。</QuadRoyalBed.description>
+
+  <PentaRoyalBed.label>豪华五人床</PentaRoyalBed.label>
+  <PentaRoyalBed.description>一张给贵族使用的豪华的，镶金边的床。非常舒适和漂亮。它本身就是一件艺术品。适合五人同眠。</PentaRoyalBed.description>
+
+
+</LanguageData>

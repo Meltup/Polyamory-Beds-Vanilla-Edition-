@@ -1,0 +1,569 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+
+  <!--Core Module-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>[JPT] Soft Warm Beds</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+	    <!--Adding new Defs-->
+      <!--     !!!ADDING NEW BEDDING SETS!!!           -->
+	    <li Class="PatchOperationAdd">
+			<xpath>Defs</xpath>
+			<value>
+				<ThingDef ParentName="BeddingBase">
+                    <defName>TripleBedding</defName>
+                    <label>triple bedding set</label>
+                    <description>A set of matress, pillows, linen and blanket for a triple bed. Provides comfort and insulates the user while in bed.</description>
+                    <graphicData>
+                      <texPath>SoftWarmBeds/Beddings/beddingTriple</texPath>
+                      <graphicClass>Graphic_Single</graphicClass>
+                    </graphicData>
+                    <costStuffCount>140</costStuffCount>
+                    <stuffCategories>
+                      <li>Fabric</li>
+                      <li>Leathery</li>
+                    </stuffCategories>
+                    <tradeability>Sellable</tradeability>
+                    <statBases>
+                      <MaxHitPoints>100</MaxHitPoints>
+                      <WorkToMake>1400</WorkToMake>
+                      <Mass>26</Mass>
+                    </statBases>
+                    <thingCategories>
+                      <li>Beddings</li>
+                    </thingCategories>
+                    <recipeMaker>
+                      <researchPrerequisite>ComplexFurniture</researchPrerequisite>
+                      <recipeUsers>
+                        <li>ElectricTailoringBench</li>
+                        <li>HandTailoringBench</li>
+                        <li>CraftingSpot</li>
+                      </recipeUsers>
+                    </recipeMaker>
+                </ThingDef>
+			</value>
+		</li>
+		<li Class="PatchOperationAdd">
+			<xpath>Defs</xpath>
+			<value>
+				<ThingDef ParentName="BeddingBase">
+                    <defName>QuadBedding</defName>
+                    <label>quadra bedding set</label>
+                    <description>A set of matress, pillows, linen and blanket for a quadra bed. Provides comfort and insulates the user while in bed.</description>
+                    <graphicData>
+                      <texPath>SoftWarmBeds/Beddings/beddingQuad</texPath>
+                      <graphicClass>Graphic_Single</graphicClass>
+                    </graphicData>
+                    <costStuffCount>180</costStuffCount>
+                    <stuffCategories>
+                      <li>Fabric</li>
+                      <li>Leathery</li>
+                    </stuffCategories>
+                    <tradeability>Sellable</tradeability>
+                    <statBases>
+                      <MaxHitPoints>100</MaxHitPoints>
+                      <WorkToMake>1800</WorkToMake>
+                      <Mass>34</Mass>
+                    </statBases>
+                    <thingCategories>
+                      <li>Beddings</li>
+                    </thingCategories>
+                    <recipeMaker>
+                      <researchPrerequisite>ComplexFurniture</researchPrerequisite>
+                      <recipeUsers>
+                        <li>ElectricTailoringBench</li>
+                        <li>HandTailoringBench</li>
+                        <li>CraftingSpot</li>
+                      </recipeUsers>
+                    </recipeMaker>
+                </ThingDef>
+			</value>
+		</li>
+		<li Class="PatchOperationAdd">
+			<xpath>Defs</xpath>
+			<value>
+				<ThingDef ParentName="BeddingBase">
+                    <defName>PentaBedding</defName>
+                    <label>penta bedding set</label>
+                    <description>A set of matress, pillows, linen and blanket for a penta bed. Provides comfort and insulates the user while in bed.</description>
+                    <graphicData>
+                      <texPath>SoftWarmBeds/Beddings/beddingPenta</texPath>
+                      <graphicClass>Graphic_Single</graphicClass>
+                    </graphicData>
+                    <costStuffCount>220</costStuffCount>
+                    <stuffCategories>
+                      <li>Fabric</li>
+                      <li>Leathery</li>
+                    </stuffCategories>
+                    <tradeability>Sellable</tradeability>
+                    <statBases>
+                      <MaxHitPoints>100</MaxHitPoints>
+                      <WorkToMake>2200</WorkToMake>
+                      <Mass>42</Mass>
+                    </statBases>
+                    <thingCategories>
+                      <li>Beddings</li>
+                    </thingCategories>
+                    <recipeMaker>
+                      <researchPrerequisite>ComplexFurniture</researchPrerequisite>
+                      <recipeUsers>
+                        <li>ElectricTailoringBench</li>
+                        <li>HandTailoringBench</li>
+                        <li>CraftingSpot</li>
+                      </recipeUsers>
+                    </recipeMaker>
+                </ThingDef>
+			</value>
+		</li>
+	  <!--     !!!ADDING NEW BLANKETS!!!           -->
+	    <li Class="PatchOperationAdd">
+			<xpath>Defs</xpath>
+			<value>
+				<ThingDef ParentName="BlanketBase">
+                    <defName>TripleBlanket</defName>
+                    <label>triple blanket</label>
+                    <graphicData>
+                    <texPath>SoftWarmBeds/Bed3/Bed3Blanket</texPath>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                        <shaderType>CutoutComplex</shaderType>
+                        <drawSize>(3.05,2.05)</drawSize>
+                        <damageData>
+                            <rect>(0,0.05,3,1.95)</rect>
+                        </damageData>
+                    </graphicData>
+                    <size>(3,2)</size>
+                </ThingDef>
+			</value>
+		</li>
+		<li Class="PatchOperationAdd">
+			<xpath>Defs</xpath>
+			<value>
+				<ThingDef ParentName="BlanketBase">
+                    <defName>QuadBlanket</defName>
+                    <label>quadra blanket</label>
+                    <graphicData>
+                    <texPath>SoftWarmBeds/Bed4/Bed4Blanket</texPath>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                        <shaderType>CutoutComplex</shaderType>
+                        <drawSize>(4.05,2.05)</drawSize>
+                        <damageData>
+                            <rect>(0,0.05,4,1.95)</rect>
+                        </damageData>
+                    </graphicData>
+                    <size>(4,2)</size>
+                </ThingDef>
+			</value>
+		</li>
+		<li Class="PatchOperationAdd">
+			<xpath>Defs</xpath>
+			<value>
+				<ThingDef ParentName="BlanketBase">
+                    <defName>TripleRoyalBlanket</defName>
+                    <label>triple royal blanket</label>
+                    <graphicData>
+                    <texPath>SoftWarmBeds/RBed3/RBed3Blanket</texPath>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                        <shaderType>CutoutComplex</shaderType>
+                        <drawSize>(3.05,2.05)</drawSize>
+                        <damageData>
+                            <rect>(0,0.05,3,1.95)</rect>
+                        </damageData>
+                    </graphicData>
+                    <size>(3,2)</size>
+                </ThingDef>
+			</value>
+		</li>
+		<li Class="PatchOperationAdd">
+			<xpath>Defs</xpath>
+			<value>
+				<ThingDef ParentName="BlanketBase">
+                    <defName>QuadRoyalBlanket</defName>
+                    <label>quadra royal blanket</label>
+                    <graphicData>
+                    <texPath>SoftWarmBeds/RBed4/RBed4Blanket</texPath>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                        <shaderType>CutoutComplex</shaderType>
+                        <drawSize>(4.05,2.05)</drawSize>
+                        <damageData>
+                            <rect>(0,0.05,4,1.95)</rect>
+                        </damageData>
+                    </graphicData>
+                    <size>(4,2)</size>
+                </ThingDef>
+			</value>
+		</li>
+		<li Class="PatchOperationAdd">
+			<xpath>Defs</xpath>
+			<value>
+				<ThingDef ParentName="BlanketBase">
+                    <defName>PentaRoyalBlanket</defName>
+                    <label>penta royal blanket</label>
+                    <graphicData>
+                    <texPath>SoftWarmBeds/RBed5/RBed5Blanket</texPath>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                        <shaderType>CutoutComplex</shaderType>
+                        <drawSize>(5.05,2.05)</drawSize>
+                        <damageData>
+                            <rect>(0,0.05,5,1.95)</rect>
+                        </damageData>
+                    </graphicData>
+                    <size>(5,2)</size>
+                </ThingDef>
+			</value>
+		</li>
+	  
+        <!--Function Extension-->
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="TripleBed" or defName="QuadBed" or defName="TripleRoyalBed" or defName="QuadRoyalBed" or defName="PentaRoyalBed"]</xpath>
+          <value>
+            <inspectorTabs>
+              <li>SoftWarmBeds.ITab_Bedding</li>
+            </inspectorTabs>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="TripleBed" or defName="QuadBed" or defName="TripleRoyalBed" or defName="QuadRoyalBed" or defName="PentaRoyalBed"]/building</xpath>
+          <value>
+            <fixedStorageSettings>
+              <filter>
+                <categories>
+                  <li>Textiles</li>
+                </categories>
+              </filter>
+            </fixedStorageSettings>
+            <defaultStorageSettings>
+              <filter>
+                <categories>
+                  <li>Textiles</li>
+                </categories>
+              </filter>
+            </defaultStorageSettings>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="TripleBed" or defName="QuadBed" or defName="TripleRoyalBed" or defName="QuadRoyalBed" or defName="PentaRoyalBed"]</xpath>
+          <value>
+            <tickerType>Normal</tickerType>
+          </value>
+        </li>
+        <!--Graphic Modifications-->
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="TripleBed"]/graphicData/texPath</xpath>
+          <value>
+            <texPath>SoftWarmBeds/Bed3/Bed3</texPath>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="QuadBed"]/graphicData/texPath</xpath>
+          <value>
+            <texPath>SoftWarmBeds/Bed4/Bed4</texPath>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="TripleRoyalBed"]/graphicData/texPath</xpath>
+          <value>
+            <texPath>SoftWarmBeds/RBed3/RBed3</texPath>
+          </value>
+        </li>
+		<li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="QuadRoyalBed"]/graphicData/texPath</xpath>
+          <value>
+            <texPath>SoftWarmBeds/RBed4/RBed4</texPath>
+          </value>
+        </li>
+		<li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="PentaRoyalBed"]/graphicData/texPath</xpath>
+          <value>
+            <texPath>SoftWarmBeds/RBed5/RBed5</texPath>
+          </value>
+        </li>
+        <!--Beddings Settings-->
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="TripleBed"]/comps</xpath>
+          <value>
+            <li Class="SoftWarmBeds.CompProperties_MakeableBed">
+              <blanketDef>TripleBlanket</blanketDef>
+              <beddingDef>TripleBedding</beddingDef>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="QuadBed"]/comps</xpath>
+          <value>
+            <li Class="SoftWarmBeds.CompProperties_MakeableBed">
+              <blanketDef>QuadBlanket</blanketDef>
+              <beddingDef>QuadBedding</beddingDef>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="TripleRoyalBed"]/comps</xpath>
+          <value>
+            <li Class="SoftWarmBeds.CompProperties_MakeableBed">
+              <blanketDef>TripleRoyalBlanket</blanketDef>
+              <beddingDef>TripleBedding</beddingDef>
+            </li>
+          </value>
+        </li>
+		<li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="QuadRoyalBed"]/comps</xpath>
+          <value>
+            <li Class="SoftWarmBeds.CompProperties_MakeableBed">
+              <blanketDef>QuadRoyalBlanket</blanketDef>
+              <beddingDef>QuadBedding</beddingDef>
+            </li>
+          </value>
+        </li>
+		<li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="PentaRoyalBed"]/comps</xpath>
+          <value>
+            <li Class="SoftWarmBeds.CompProperties_MakeableBed">
+              <blanketDef>PentaRoyalBlanket</blanketDef>
+              <beddingDef>PentaBedding</beddingDef>
+            </li>
+          </value>
+        </li>
+        <!--BedRestEffectiveness Settings-->
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="TripleBed" or defName="QuadBed"]/statBases/BedRestEffectiveness</xpath>
+          <value>
+            <BedRestEffectiveness>0.5</BedRestEffectiveness>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="TripleRoyalBed" or defName="QuadRoyalBed" or defName="PentaRoyalBed"]/statBases/BedRestEffectiveness</xpath>
+          <value>
+            <BedRestEffectiveness>0.55</BedRestEffectiveness>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="BedrollTriple" or defName="BedrollQuad"]/statBases/BedRestEffectiveness</xpath>
+          <value>
+            <BedRestEffectiveness>0.45</BedRestEffectiveness>
+          </value>
+        </li>
+        <!--Comfort Settings-->
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="TripleBed" or defName="QuadBed"]/statBases/Comfort</xpath>
+          <value>
+            <Comfort>0.25</Comfort>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="TripleRoyalBed" or defName="QuadRoyalBed" or defName="PentaRoyalBed"]/statBases/Comfort</xpath>
+          <value>
+            <Comfort>0.4</Comfort>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="BedrollTriple" or defName="BedrollQuad"]/statBases/Comfort</xpath>
+          <value>
+            <Comfort>0.18</Comfort>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName = "TripleSleepingSpot" or defName = "QuadSleepingSpot"]/statBases/Comfort</xpath>
+          <value>
+            <Comfort>0</Comfort>
+          </value>
+        </li>
+        <!--Insulation Settings-->
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="BedrollTriple" or defName="BedrollQuad"]/statBases</xpath>
+          <value>
+            <BedStuffEffectMultiplierInsulation_Cold>0.2</BedStuffEffectMultiplierInsulation_Cold>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="TripleBed" or defName="QuadBed"]/statBases</xpath>
+          <value>
+            <BedStuffEffectMultiplierInsulation_Cold>0.35</BedStuffEffectMultiplierInsulation_Cold>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="TripleRoyalBed" or defName="QuadRoyalBed" or defName="PentaRoyalBed"]/statBases</xpath>
+          <value>
+            <BedStuffEffectMultiplierInsulation_Cold>0.5</BedStuffEffectMultiplierInsulation_Cold>
+          </value>
+        </li>
+		
+		
+		<!-- ADDITIONAL PATCHING FOR NanoRepairTech -->
+		
+		<li Class="PatchOperationFindMod">
+            <mods>
+                <li>Nano Repair Tech</li>
+            </mods>
+            <match Class="PatchOperationSequence">
+            <success>Normal</success>
+              <operations>
+			  
+			    <!--Function Extension-->
+                <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName = "Ogre_NanoTech_TripleBed" or defName = "Ogre_NanoTech_QuadBed" or defName = "Ogre_NanoTech_TripleRoyalBed" or defName = "Ogre_NanoTech_QuadRoyalBed" or defName = "Ogre_NanoTech_PentaRoyalBed"]</xpath>
+                <value>
+                    <inspectorTabs>
+                        <li>SoftWarmBeds.ITab_Bedding</li>
+                    </inspectorTabs>
+                </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName = "Ogre_NanoTech_TripleBed" or defName = "Ogre_NanoTech_QuadBed" or defName = "Ogre_NanoTech_TripleRoyalBed" or defName = "Ogre_NanoTech_QuadRoyalBed" or defName = "Ogre_NanoTech_PentaRoyalBed"]/building</xpath>
+                <value>
+                    <fixedStorageSettings>
+                        <filter>
+                            <categories>
+                                <li>Textiles</li>
+                            </categories>
+                        </filter>
+                    </fixedStorageSettings>
+                    <defaultStorageSettings>
+                        <filter>
+                            <categories>
+                                <li>Textiles</li>
+                            </categories>
+                        </filter>
+                    </defaultStorageSettings>
+                </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName = "Ogre_NanoTech_TripleBed" or defName = "Ogre_NanoTech_QuadBed" or defName = "Ogre_NanoTech_TripleRoyalBed" or defName = "Ogre_NanoTech_QuadRoyalBed" or defName = "Ogre_NanoTech_PentaRoyalBed"]/tickerType</xpath>
+                    <value>
+                        <tickerType>Normal</tickerType>
+                    </value>
+                </li>
+				
+				<!--Graphic Modifications-->
+                <li Class="PatchOperationReplace">
+                  <xpath>Defs/ThingDef[defName = "Ogre_NanoTech_TripleBed"]/graphicData/texPath</xpath>
+                  <value>
+                     <texPath>SoftWarmBeds/Bed3/Bed3</texPath>
+                  </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                  <xpath>Defs/ThingDef[defName = "Ogre_NanoTech_QuadBed"]/graphicData/texPath</xpath>
+                  <value>
+                    <texPath>SoftWarmBeds/Bed4/Bed4</texPath>
+                  </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                  <xpath>Defs/ThingDef[defName = "Ogre_NanoTech_TripleRoyalBed"]/graphicData/texPath</xpath>
+                  <value>
+                    <texPath>SoftWarmBeds/RBed3/RBed3</texPath>
+                  </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                  <xpath>Defs/ThingDef[defName = "Ogre_NanoTech_QuadRoyalBed"]/graphicData/texPath</xpath>
+                  <value>
+                    <texPath>SoftWarmBeds/RBed4/RBed4</texPath>
+                  </value>
+                </li>
+				<li Class="PatchOperationReplace">
+                  <xpath>Defs/ThingDef[defName = "Ogre_NanoTech_PentaRoyalBed"]/graphicData/texPath</xpath>
+                  <value>
+                    <texPath>SoftWarmBeds/RBed5/RBed5</texPath>
+                  </value>
+                </li>
+				
+				<!--Beddings Settings-->
+                <li Class="PatchOperationAdd">
+                  <xpath>Defs/ThingDef[defName = "Ogre_NanoTech_TripleBed"]/comps</xpath>
+                  <value>
+                    <li Class="SoftWarmBeds.CompProperties_MakeableBed">
+                      <blanketDef>TripleBlanket</blanketDef>
+                      <beddingDef>TripleBedding</beddingDef>
+                    </li>
+                  </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                  <xpath>Defs/ThingDef[defName = "Ogre_NanoTech_QuadBed"]/comps</xpath>
+                  <value>
+                    <li Class="SoftWarmBeds.CompProperties_MakeableBed">
+                      <blanketDef>QuadBlanket</blanketDef>
+                      <beddingDef>QuadBedding</beddingDef>
+                    </li>
+                  </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                  <xpath>Defs/ThingDef[defName = "Ogre_NanoTech_TripleRoyalBed"]/comps</xpath>
+                  <value>
+                    <li Class="SoftWarmBeds.CompProperties_MakeableBed">
+                      <blanketDef>TripleRoyalBlanket</blanketDef>
+                      <beddingDef>TripleBedding</beddingDef>
+                    </li>
+                  </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                  <xpath>Defs/ThingDef[defName = "Ogre_NanoTech_QuadRoyalBed"]/comps</xpath>
+                  <value>
+                    <li Class="SoftWarmBeds.CompProperties_MakeableBed">
+                      <blanketDef>QuadRoyalBlanket</blanketDef>
+                      <beddingDef>QuadBedding</beddingDef>
+                    </li>
+                  </value>
+                </li>
+				<li Class="PatchOperationAdd">
+                  <xpath>Defs/ThingDef[defName = "Ogre_NanoTech_PentaRoyalBed"]/comps</xpath>
+                  <value>
+                    <li Class="SoftWarmBeds.CompProperties_MakeableBed">
+                      <blanketDef>PentaRoyalBlanket</blanketDef>
+                      <beddingDef>PentaBedding</beddingDef>
+                    </li>
+                  </value>
+                </li>
+				
+				<!--BedRestEffectiveness Settings-->
+    		    <li Class="PatchOperationReplace">
+     		     <xpath>Defs/ThingDef[defName = "Ogre_NanoTech_TripleBed" or defName = "Ogre_NanoTech_QuadBed"]/statBases/BedRestEffectiveness</xpath>
+    		      <value>
+     		       <BedRestEffectiveness>0.5</BedRestEffectiveness>
+     		     </value>
+    		    </li>
+    		    <li Class="PatchOperationReplace">
+    		      <xpath>Defs/ThingDef[defName = "Ogre_NanoTech_TripleRoyalBed" or defName = "Ogre_NanoTech_QuadRoyalBed" or defName = "Ogre_NanoTech_PentaRoyalBed"]/statBases/BedRestEffectiveness</xpath>
+     		     <value>
+     		       <BedRestEffectiveness>0.55</BedRestEffectiveness>
+     		     </value>
+     		    </li>
+				
+				<!--Comfort Settings-->
+     		    <li Class="PatchOperationReplace">
+     		      <xpath>Defs/ThingDef[defName = "Ogre_NanoTech_TripleBed" or defName = "Ogre_NanoTech_QuadBed"]/statBases/Comfort</xpath>
+     		      <value>
+     		        <Comfort>0.25</Comfort>
+      		     </value>
+     		    </li>
+     		    <li Class="PatchOperationReplace">
+      		     <xpath>Defs/ThingDef[defName = "Ogre_NanoTech_TripleRoyalBed" or defName = "Ogre_NanoTech_QuadRoyalBed" or defName = "Ogre_NanoTech_PentaRoyalBed"]/statBases/Comfort</xpath>
+      		     <value>
+      		       <Comfort>0.4</Comfort>
+      		     </value>
+      		    </li>
+				
+				<!--Insulation Settings-->
+       		   <li Class="PatchOperationAdd">
+      		      <xpath>Defs/ThingDef[defName = "Ogre_NanoTech_TripleBed" or defName = "Ogre_NanoTech_QuadBed"]/statBases</xpath>
+       		     <value>
+       		       <BedStuffEffectMultiplierInsulation_Cold>0.35</BedStuffEffectMultiplierInsulation_Cold>
+       		     </value>
+       		    </li>
+        		  <li Class="PatchOperationAdd">
+       		     <xpath>Defs/ThingDef[defName = "Ogre_NanoTech_TripleRoyalBed" or defName = "Ogre_NanoTech_QuadRoyalBed" or defName = "Ogre_NanoTech_PentaRoyalBed"]/statBases</xpath>
+       		     <value>
+        		    <BedStuffEffectMultiplierInsulation_Cold>0.5</BedStuffEffectMultiplierInsulation_Cold>
+        		 </value>
+        	    </li>
+				
+		      </operations>
+            </match>
+        </li>
+			
+      </operations>
+    </match>
+  </Operation>
+  
+</Patch>

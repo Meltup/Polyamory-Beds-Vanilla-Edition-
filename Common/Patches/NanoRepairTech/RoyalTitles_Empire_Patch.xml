@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Nano Repair Tech</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+			
+    <!--Test Royal Titles then Modify as Needed-->
+    <li Class="PatchOperationSequence">
+	<success>Always</success>
+		<operations>
+		<li Class="PatchOperationTest">
+			<xpath>Defs/RoyalTitleDef[defName = "Esquire"]</xpath>
+				<success>Normal</success>
+		</li>
+		<li Class="PatchOperationAdd">
+			<xpath>Defs/RoyalTitleDef[defName = "Esquire"]/bedroomRequirements/li[@Class="RoomRequirement_ThingAnyOf"]/things[li="DoubleBed"]</xpath>
+			<value>
+			    <li>Ogre_NanoTech_TripleBed</li>
+				<li>Ogre_NanoTech_QuadBed</li>
+				<li>Ogre_NanoTech_TripleRoyalBed</li>
+				<li>Ogre_NanoTech_QuadRoyalBed</li>
+				<li>Ogre_NanoTech_PentaRoyalBed</li>
+			</value>
+		</li>
+		</operations>
+	</li>
+	
+	<li Class="PatchOperationSequence">
+	<success>Always</success>
+		<operations>
+		<li Class="PatchOperationTest">
+			<xpath>Defs/RoyalTitleDef[defName = "Knight"]</xpath>
+				<success>Normal</success>
+		</li>
+		<li Class="PatchOperationAdd">
+			<xpath>Defs/RoyalTitleDef[defName = "Knight"]/bedroomRequirements/li[@Class="RoomRequirement_ThingAnyOf"]/things[li="DoubleBed"]</xpath>
+			<value>
+			    <li>Ogre_NanoTech_TripleBed</li>
+				<li>Ogre_NanoTech_QuadBed</li>
+				<li>Ogre_NanoTech_TripleRoyalBed</li>
+				<li>Ogre_NanoTech_QuadRoyalBed</li>
+				<li>Ogre_NanoTech_PentaRoyalBed</li>
+			</value>
+		</li>
+		</operations>
+	</li>
+	
+	<li Class="PatchOperationSequence">
+	<success>Always</success>
+		<operations>
+		<li Class="PatchOperationTest">
+			<xpath>Defs/RoyalTitleDef[defName = "Praetor"]</xpath>
+				<success>Normal</success>
+		</li>
+		<li Class="PatchOperationAdd">
+			<xpath>Defs/RoyalTitleDef[defName = "Praetor"]/bedroomRequirements/li[@Class="RoomRequirement_ThingAnyOf"]/things[li="DoubleBed"]</xpath>
+			<value>
+			    <li>Ogre_NanoTech_TripleBed</li>
+				<li>Ogre_NanoTech_QuadBed</li>
+				<li>Ogre_NanoTech_TripleRoyalBed</li>
+				<li>Ogre_NanoTech_QuadRoyalBed</li>
+				<li>Ogre_NanoTech_PentaRoyalBed</li>
+			</value>
+		</li>
+		</operations>
+	</li>
+	
+	<li Class="PatchOperationSequence">
+	<success>Always</success>
+		<operations>
+		<li Class="PatchOperationTest">
+			<xpath>Defs/RoyalTitleDef[defName = "Baron"]</xpath>
+				<success>Normal</success>
+		</li>
+		<li Class="PatchOperationAdd">
+			<xpath>Defs/RoyalTitleDef[defName = "Baron"]/bedroomRequirements/li[@Class="RoomRequirement_ThingAnyOf"]/things[li="RoyalBed"]</xpath>
+			<value>
+			    <li>Ogre_NanoTech_TripleRoyalBed</li>
+				<li>Ogre_NanoTech_QuadRoyalBed</li>
+				<li>Ogre_NanoTech_PentaRoyalBed</li>
+			</value>
+		</li>
+		</operations>
+	</li>
+	
+	<li Class="PatchOperationSequence">
+	<success>Always</success>
+		<operations>
+		<li Class="PatchOperationTest">
+			<xpath>Defs/RoyalTitleDef[defName = "Count"]</xpath>
+				<success>Normal</success>
+		</li>
+		<li Class="PatchOperationAdd">
+			<xpath>Defs/RoyalTitleDef[defName = "Count"]/bedroomRequirements/li[@Class="RoomRequirement_ThingAnyOf"]/things[li="RoyalBed"]</xpath>
+			<value>
+			    <li>Ogre_NanoTech_TripleRoyalBed</li>
+				<li>Ogre_NanoTech_QuadRoyalBed</li>
+				<li>Ogre_NanoTech_PentaRoyalBed</li>
+			</value>
+		</li>
+		</operations>
+	</li>
+	
+	<li Class="PatchOperationSequence">
+	<success>Always</success>
+		<operations>
+		<li Class="PatchOperationTest">
+			<xpath>Defs/RoyalTitleDef[@Name = "BaseEmpireTitleNPC"]</xpath>
+				<success>Normal</success>
+		</li>
+		<li Class="PatchOperationAdd">
+			<xpath>Defs/RoyalTitleDef[@Name = "BaseEmpireTitleNPC"]/bedroomRequirements/li[@Class="RoomRequirement_ThingAnyOf"]/things[li="RoyalBed"]</xpath>
+			<value>
+			    <li>Ogre_NanoTech_TripleRoyalBed</li>
+				<li>Ogre_NanoTech_QuadRoyalBed</li>
+				<li>Ogre_NanoTech_PentaRoyalBed</li>
+			</value>
+		</li>
+		</operations>
+	</li>
+    <!--End of  Royal Titles Modification -->
+
+	        </operations>
+		</match>
+	</Operation>
+	
+</Patch>
