@@ -1,0 +1,111 @@
+<Patch>
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Ideology</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+		<success>Always</success>
+		    <operations>
+
+                <li Class="PatchOperationAdd">
+	            	<xpath>Defs</xpath>
+	            	<value>
+	            		<ThingDef ParentName="TripleBed">
+	            		    <defName>SlabTripleBed</defName>
+	            		    <label>slab triple bed</label>
+	            		    <description>A slab of hard material made to sleep on. Slab beds are uncomfortable, but some see their use as a demonstration of moral good. This one is wide enough to fit three people.</description>
+	            		    <graphicData Inherit="False">
+	            		      <texPath>Slab3/Slab3</texPath>
+	            		      <graphicClass>Graphic_Multi</graphicClass>
+	            		      <shaderType>CutoutComplex</shaderType>
+	            		      <drawSize>(3.05,2.05)</drawSize>
+	            		    </graphicData>
+	            		    <canGenerateDefaultDesignator>false</canGenerateDefaultDesignator>
+	            		    <statBases Inherit="False">
+	            		      <MaxHitPoints>260</MaxHitPoints>
+	            		      <WorkToBuild>1100</WorkToBuild>
+	            		      <Mass>70</Mass>
+	            		      <BedRestEffectiveness>1</BedRestEffectiveness>
+	            		      <ImmunityGainSpeedFactor>1.07</ImmunityGainSpeedFactor>
+	            		      <SurgerySuccessChanceFactor>1</SurgerySuccessChanceFactor>
+	            		    </statBases>
+	            		    <size>(3,2)</size>
+	            		    <building>
+	            		      <bed_slabBed>true</bed_slabBed> 
+	            		      <bed_showSleeperBody>true</bed_showSleeperBody>
+	            		    </building>
+	            		    <stuffCategories Inherit="False">
+ 	            		     <li>Metallic</li>
+	            		      <li>Woody</li>
+	            		      <li>Stony</li>
+ 	            		   </stuffCategories>
+ 	            		   <costStuffCount>140</costStuffCount>
+  	            		  <fillPercent>0.3</fillPercent>
+  	            		  <pathCost>20</pathCost>
+ 	            		   <leaveResourcesWhenKilled>True</leaveResourcesWhenKilled>
+ 	            		   <staticSunShadowHeight>0.17</staticSunShadowHeight>
+  	            		  <castEdgeShadows>True</castEdgeShadows>
+  	            		  <techLevel>Medieval</techLevel>
+  	            		  <uiIconScale>0.90</uiIconScale>
+  	            		</ThingDef>
+            		</value>
+            	</li>
+
+            	<li Class="PatchOperationAdd">
+	            	<xpath>Defs</xpath>
+	            	<value>
+	            		<ThingDef ParentName="QuadBed">
+	            		    <defName>SlabQuadBed</defName>
+	            		    <label>slab quad bed</label>
+	            		    <description>A slab of hard material made to sleep on. Slab beds are uncomfortable, but some see their use as a demonstration of moral good. This one is wide enough to fit four people.</description>
+	            		    <graphicData Inherit="False">
+	            		      <texPath>Slab4/Slab4</texPath>
+	            		      <graphicClass>Graphic_Multi</graphicClass>
+	            		      <shaderType>CutoutComplex</shaderType>
+	            		      <drawSize>(4.05,2.05)</drawSize>
+	            		    </graphicData>
+	            		    <canGenerateDefaultDesignator>false</canGenerateDefaultDesignator>
+	            		    <statBases Inherit="False">
+	            		      <MaxHitPoints>320</MaxHitPoints>
+	            		      <WorkToBuild>1450</WorkToBuild>
+	            		      <Mass>90</Mass>
+	            		      <BedRestEffectiveness>1</BedRestEffectiveness>
+	            		      <ImmunityGainSpeedFactor>1.07</ImmunityGainSpeedFactor>
+	            		      <SurgerySuccessChanceFactor>1</SurgerySuccessChanceFactor>
+	            		    </statBases>
+	            		    <size>(4,2)</size>
+	            		    <building>
+	            		      <bed_slabBed>true</bed_slabBed>
+	            		      <bed_showSleeperBody>true</bed_showSleeperBody>
+	            		    </building>
+	            		    <stuffCategories Inherit="False">
+ 	            		     <li>Metallic</li>
+	            		      <li>Woody</li>
+	            		      <li>Stony</li>
+ 	            		   </stuffCategories>
+ 	            		   <costStuffCount>195</costStuffCount>
+  	            		  <fillPercent>0.3</fillPercent>
+  	            		  <pathCost>20</pathCost>
+ 	            		   <leaveResourcesWhenKilled>True</leaveResourcesWhenKilled>
+ 	            		   <staticSunShadowHeight>0.17</staticSunShadowHeight>
+  	            		  <castEdgeShadows>True</castEdgeShadows>
+  	            		  <techLevel>Medieval</techLevel>
+  	            		  <uiIconScale>0.90</uiIconScale>
+  	            		</ThingDef>
+            		</value>
+            	</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/MemeDef[defName = "PainIsVirtue"]/addDesignators[li="SlabDoubleBed"]</xpath>
+					<value>
+					    <li>SlabTripleBed</li>
+						<li>SlabQuadBed</li>
+					</value>
+				</li>
+	
+	        </operations>
+        </match>
+    </Operation>
+	
+</Patch>
