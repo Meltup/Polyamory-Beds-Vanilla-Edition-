@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+<!--Test Royal Titles then Modify as Needed-->
+
+    <Operation Class="PatchOperationSequence">
+	<success>Always</success>
+		<operations>
+		<li Class="PatchOperationTest">
+			<xpath>Defs/RoyalTitleDef[defName = "Esquire"]</xpath>
+				<success>Normal</success>
+		</li>
+		<li Class="PatchOperationAdd">
+			<xpath>Defs/RoyalTitleDef[defName = "Esquire"]/bedroomRequirements/li[@Class="RoomRequirement_ThingAnyOf"]/things[li="DoubleBed"]</xpath>
+			<value>
+			    <li>TripleBed</li>
+				<li>QuadBed</li>
+				<li>TripleRoyalBed</li>
+				<li>QuadRoyalBed</li>
+				<li>PentaRoyalBed</li>
+			</value>
+		</li>
+		</operations>
+	</Operation>
+	
+	<Operation Class="PatchOperationSequence">
+	<success>Always</success>
+		<operations>
+		<li Class="PatchOperationTest">
+			<xpath>Defs/RoyalTitleDef[defName = "Knight"]</xpath>
+				<success>Normal</success>
+		</li>
+		<li Class="PatchOperationAdd">
+			<xpath>Defs/RoyalTitleDef[defName = "Knight"]/bedroomRequirements/li[@Class="RoomRequirement_ThingAnyOf"]/things[li="DoubleBed"]</xpath>
+			<value>
+			    <li>TripleBed</li>
+				<li>QuadBed</li>
+				<li>TripleRoyalBed</li>
+				<li>QuadRoyalBed</li>
+				<li>PentaRoyalBed</li>
+			</value>
+		</li>
+		</operations>
+	</Operation>
+	
+	<Operation Class="PatchOperationSequence">
+	<success>Always</success>
+		<operations>
+		<li Class="PatchOperationTest">
+			<xpath>Defs/RoyalTitleDef[defName = "Praetor"]</xpath>
+				<success>Normal</success>
+		</li>
+		<li Class="PatchOperationAdd">
+			<xpath>Defs/RoyalTitleDef[defName = "Praetor"]/bedroomRequirements/li[@Class="RoomRequirement_ThingAnyOf"]/things[li="DoubleBed"]</xpath>
+			<value>
+			    <li>TripleBed</li>
+				<li>QuadBed</li>
+				<li>TripleRoyalBed</li>
+				<li>QuadRoyalBed</li>
+				<li>PentaRoyalBed</li>
+			</value>
+		</li>
+		</operations>
+	</Operation>
+	
+	<Operation Class="PatchOperationSequence">
+	<success>Always</success>
+		<operations>
+		<li Class="PatchOperationTest">
+			<xpath>Defs/RoyalTitleDef[defName = "Baron"]</xpath>
+				<success>Normal</success>
+		</li>
+		<li Class="PatchOperationAdd">
+			<xpath>Defs/RoyalTitleDef[defName = "Baron"]/bedroomRequirements/li[@Class="RoomRequirement_ThingAnyOf"]/things[li="RoyalBed"]</xpath>
+			<value>
+			    <li>TripleRoyalBed</li>
+				<li>QuadRoyalBed</li>
+				<li>PentaRoyalBed</li>
+			</value>
+		</li>
+		</operations>
+	</Operation>
+	
+	<Operation Class="PatchOperationSequence">
+	<success>Always</success>
+		<operations>
+		<li Class="PatchOperationTest">
+			<xpath>Defs/RoyalTitleDef[defName = "Count"]</xpath>
+				<success>Normal</success>
+		</li>
+		<li Class="PatchOperationAdd">
+			<xpath>Defs/RoyalTitleDef[defName = "Count"]/bedroomRequirements/li[@Class="RoomRequirement_ThingAnyOf"]/things[li="RoyalBed"]</xpath>
+			<value>
+			    <li>TripleRoyalBed</li>
+				<li>QuadRoyalBed</li>
+				<li>PentaRoyalBed</li>
+			</value>
+		</li>
+		</operations>
+	</Operation>
+	
+	<Operation Class="PatchOperationSequence">
+	<success>Always</success>
+		<operations>
+		<li Class="PatchOperationTest">
+			<xpath>Defs/RoyalTitleDef[@Name = "BaseEmpireTitleNPC"]</xpath>
+				<success>Normal</success>
+		</li>
+		<li Class="PatchOperationAdd">
+			<xpath>Defs/RoyalTitleDef[@Name = "BaseEmpireTitleNPC"]/bedroomRequirements/li[@Class="RoomRequirement_ThingAnyOf"]/things[li="RoyalBed"]</xpath>
+			<value>
+			    <li>TripleRoyalBed</li>
+				<li>QuadRoyalBed</li>
+				<li>PentaRoyalBed</li>
+			</value>
+		</li>
+		</operations>
+	</Operation>
+	
+</Patch>
