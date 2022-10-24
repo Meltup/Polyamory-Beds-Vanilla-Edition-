@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
 	<name>Polyamory Beds (Vanilla Edition)</name>
-	<author>Meltup</author>
+	<author>Meltup, Sicarious</author>
 	<supportedVersions>
 		<li>1.1</li>
 		<li>1.2</li>
@@ -14,6 +14,7 @@
 	  <li>Ludeon.RimWorld</li>
       <li>Ludeon.RimWorld.Royalty</li>
       <li>Ludeon.RimWorld.Ideology</li>
+	  <li>Ludeon.RimWorld.Biotech</li>
     </loadAfter>
 	
 	<description>More beds for your polyamorous pawns!
@@ -25,8 +26,6 @@ Features:
      - Triple, quadra beds and royal beds (require 'Complex Furniture' to be researched, royal beds also require 8 skill in Construction);
      - Penta royal bed (requires 'Complex Furniture' to be researched, 8 skill in Construction).
 Stats are carefully balanced to be in line with Vanilla beds, graphics is updated.
-
-Includes full built-in support for [JPT] Soft Warm Beds and Nano Repair Tech!
  
 Known issues
      - Some other mods may interfere with game's miniaturisation mechanics thus making it possible to install/uninstall sleeping spots (and you may get also get messages about 'Outdoor penalty' when placing sleeping spots outside).
