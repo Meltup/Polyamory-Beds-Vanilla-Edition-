@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
     <!-- Makes some some vanilla beds into bases that can be inherited from. Also sets uiOrder. -->
-    <!-- Order: Sleeping Spots (2000), Bedrolls (2005), Normal Beds (2010), Royal Beds (2015), Other Beds (2020), Slab Beds (2030) -->
+    <!-- Order: Sleeping Spots (2000), Bedrolls (2002), Normal Beds (2004), Royal Beds (2006), Slab Beds (2008), Other Beds (2020) -->
     <!-- Sleeping Spot: Already abstracted in Vanilla, no action needed. -->
     <!-- Bedroll: Use Double Bedroll as base, set UI order -->
     <Operation Class="PatchOperationSequence">
@@ -11,16 +11,28 @@
             <attribute>Name</attribute>
             <value>BedrollBase</value>
         </li>
-        <li Class="PatchOperationReplace">
-            <xpath>/Defs/ThingDef [defName="Bedroll" or defName="BedrollDouble"]/uiOrder/text()</xpath>
-            <value>2005</value>
+        <li Class="PatchOperationRemove">
+            <success>Always</success>
+            <xpath>/Defs/ThingDef [defName="Bedroll" or defName="BedrollDouble"]/uiOrder</xpath>
+        </li>
+        <li Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef [defName="Bedroll" or defName="BedrollDouble"]</xpath>
+            <value><uiOrder>2002</uiOrder></value>
         </li>
         </operations>
     </Operation>
-    <!-- Normal Bed: Double Beds are already named for inheritance, just need UI order set same as single bed -->
-    <Operation Class="PatchOperationAdd">
-        <xpath>/Defs/ThingDef [defName="DoubleBed"]</xpath>
-        <value><uiOrder>2010</uiOrder></value>
+    <!-- Normal Bed: Double Beds are already named for inheritance, just set UI order -->
+    <Operation Class="PatchOperationSequence">
+        <operations>
+        <li Class="PatchOperationRemove">
+            <success>Always</success>
+            <xpath>/Defs/ThingDef [defName="Bed" or defName="DoubleBed"]/uiOrder</xpath>
+        </li>
+        <li Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef [defName="Bed" or defName="DoubleBed"]</xpath>
+            <value><uiOrder>2004</uiOrder></value>
+        </li>
+        </operations>
     </Operation>
     <!-- Royal Bed: Make into base, set UI order -->
     <Operation Class="PatchOperationSequence">
@@ -30,13 +42,17 @@
             <attribute>Name</attribute>
             <value>RoyalBedBase</value>
         </li>
+        <li Class="PatchOperationRemove">
+            <success>Always</success>
+            <xpath>/Defs/ThingDef [defName="RoyalBed"]/uiOrder</xpath>
+        </li>
         <li Class="PatchOperationAdd">
             <xpath>/Defs/ThingDef [defName="RoyalBed"]</xpath>
-            <value><uiOrder>2015</uiOrder></value>
+            <value><uiOrder>2006</uiOrder></value>
         </li>
         </operations>
     </Operation>
-    <!-- Slab Bed: Use Slab Double Bed as base, set UI order to same as single Slab Bed. Also add designators to MemeDef. -->
+    <!-- Slab Bed: Use Slab Double Bed as base, set UI order. Also add designators to MemeDef. -->
     <Operation Class="PatchOperationSequence" MayRequire="Ludeon.RimWorld.Ideology">
         <operations>
         <li Class="PatchOperationAttributeSet">
@@ -44,18 +60,22 @@
             <attribute>Name</attribute>
             <value>SlabBedBase</value>
         </li>
+        <li Class="PatchOperationRemove">
+            <success>Always</success>
+            <xpath>/Defs/ThingDef [defName="SlabBed" or defName="SlabDoubleBed"]/uiOrder</xpath>
+        </li>
         <li Class="PatchOperationAdd">
-            <xpath>/Defs/ThingDef [defName="SlabDoubleBed"]</xpath>
-            <value><uiOrder>2030</uiOrder></value>
+            <xpath>/Defs/ThingDef [defName="SlabBed" or defName="SlabDoubleBed"]</xpath>
+            <value><uiOrder>2008</uiOrder></value>
+        </li>
+        <li Class="PatchOperationInsert">
+            <xpath>Defs/MemeDef[defName = "PainIsVirtue"]/addDesignators/li[text()="SlabDoubleBed"]</xpath>
+            <order>Append</order>
+            <value>
+                <li>SlabTripleBed</li>
+                <li>SlabQuadBed</li>
+            </value>
         </li>
         </operations>
-        <li Class="PatchOperationInsert">
-	    <xpath>Defs/MemeDef[defName = "PainIsVirtue"]/addDesignators/li[text()="SlabDoubleBed"]</xpath>
-            <order>Append</order>
-	    <value>
-	        <li>SlabTripleBed</li>
-		<li>SlabQuadBed</li>
-	    </value>
-	</li>
     </Operation>
 </Patch>
