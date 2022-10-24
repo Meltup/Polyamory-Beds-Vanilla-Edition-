@@ -72,8 +72,8 @@
             <xpath>Defs/MemeDef[defName = "PainIsVirtue"]/addDesignators/li[text()="SlabDoubleBed"]</xpath>
             <order>Append</order>
             <value>
+                <li>SlabQuadBed</li> <!-- Needs ordering reversed due to append order -->
                 <li>SlabTripleBed</li>
-                <li>SlabQuadBed</li>
             </value>
         </li>
         </operations>
