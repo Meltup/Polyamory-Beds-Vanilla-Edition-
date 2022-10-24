@@ -36,7 +36,7 @@
         </li>
         </operations>
     </Operation>
-    <!-- Slab Bed: Use Slab Double Bed as base, set UI order to same as single Slab Bed -->
+    <!-- Slab Bed: Use Slab Double Bed as base, set UI order to same as single Slab Bed. Also add designators to MemeDef. -->
     <Operation Class="PatchOperationSequence" MayRequire="Ludeon.RimWorld.Ideology">
         <operations>
         <li Class="PatchOperationAttributeSet">
@@ -49,5 +49,13 @@
             <value><uiOrder>2030</uiOrder></value>
         </li>
         </operations>
+        <li Class="PatchOperationInsert">
+			<xpath>Defs/MemeDef[defName = "PainIsVirtue"]/addDesignators/li[text()="SlabDoubleBed"]</xpath>
+            <order>Append</order>
+			<value>
+			    <li>SlabTripleBed</li>
+				<li>SlabQuadBed</li>
+			</value>
+			</li>
     </Operation>
 </Patch>
