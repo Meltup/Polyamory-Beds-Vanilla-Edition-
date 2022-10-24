@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+    <Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Furniture Expanded</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<li Class="PatchOperationAdd">
+		            <xpath>/Defs/ThingDef[defName = "TripleBed" or defName = "QuadBed" or defName = "TripleRoyalBed" or defName = "QuadRoyalBed" or defName = "PentaRoyalBed"]/comps/li[1]/linkableFacilities</xpath>
+		            <value>
+		                <li>Table_RoyalDresser</li>
+		                <li>Table_RoyalEndTable</li>
+		                <li>Table_Wardrobe</li>
+		            </value>
+	            </li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>

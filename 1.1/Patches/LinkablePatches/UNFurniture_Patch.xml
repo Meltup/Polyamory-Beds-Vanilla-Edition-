@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+    <Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+	     	<li Class="PatchOperationTest">
+		        <xpath>/Defs/ThingDef[defName = "SadjuukFurnitureAA"]</xpath>
+	        </li>
+	        <li Class="PatchOperationAdd">
+		        <xpath>/Defs/ThingDef[defName = "TripleBed" or defName = "QuadBed" or defName = "TripleRoyalBed" or defName = "QuadRoyalBed" or defName = "PentaRoyalBed"]/comps/li[1]/linkableFacilities</xpath>
+		        <value>
+		            <li>SadjuukFurnitureAA</li>
+				    <li>SadjuukFurnitureBA</li>
+				    <li>SadjuukFurnitureAB</li>
+				    <li>SadjuukFurnitureBB</li>
+				    <li>SadjuukFurnitureAC</li>
+				    <li>SadjuukFurnitureBC</li>
+		        </value>
+	        </li>
+		</operations>
+	</Operation>
+</Patch>
