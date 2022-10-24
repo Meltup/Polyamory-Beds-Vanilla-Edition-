@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+<!-- If any Royal Title requires a Double Bedroll, it is also satisfied by Triple or Quad Bedrolls -->
+<Operation Class="PatchOperationConditional" MayRequire="Ludeon.RimWorld.Royalty">
+	<xpath>Defs/RoyalTitleDef/bedroomRequirements/li[@Class="RoomRequirement_ThingAnyOf"]/things[li="BedrollDouble"]</xpath>
+	<match Class="PatchOperationInsert">
+		<xpath>Defs/RoyalTitleDef/bedroomRequirements/li[@Class="RoomRequirement_ThingAnyOf"]/things/li[text()="BedrollDouble"]</xpath>
+		<order>Append</order>
+		<value>
+			<li>BedrollTriple</li>
+			<li>BedrollQuad</li>
+		</value>
+	</match>
+</Operation>
+
+<!-- If any Royal Title requires a Double Bed, it is also satisfied by Triple or Quad Beds -->
+<Operation Class="PatchOperationConditional" MayRequire="Ludeon.RimWorld.Royalty">
+	<xpath>Defs/RoyalTitleDef/bedroomRequirements/li[@Class="RoomRequirement_ThingAnyOf"]/things[li="DoubleBed"]</xpath>
+	<match Class="PatchOperationInsert">
+		<xpath>Defs/RoyalTitleDef/bedroomRequirements/li[@Class="RoomRequirement_ThingAnyOf"]/things/li[text()="DoubleBed"]</xpath>
+		<order>Append</order>
+		<value>
+			<li>TripleBed</li>
+			<li>QuadBed</li>
+		</value>
+	</match>
+</Operation>
+
+<!-- If any Royal Title requires a Royal Bed, it is also satisfied by Triple, Quad, or Penta Royal Beds -->
+<Operation Class="PatchOperationConditional" MayRequire="Ludeon.RimWorld.Royalty">
+	<xpath>Defs/RoyalTitleDef/bedroomRequirements/li[@Class="RoomRequirement_ThingAnyOf"]/things[li="RoyalBed"]</xpath>
+	<match Class="PatchOperationInsert">
+		<xpath>Defs/RoyalTitleDef/bedroomRequirements/li[@Class="RoomRequirement_ThingAnyOf"]/things/li[text()="RoyalBed"]</xpath>
+		<order>Append</order>
+		<value>
+			<li>TripleRoyalBed</li>
+			<li>QuadRoyalBed</li>
+			<li>PentaRoyalBed</li>
+		</value>
+	</match>
+</Operation>
+
+<!-- If any Royal Title requires a Slab Double Bed, it is also satisfied by Triple or Quad Slab Beds -->
+<Operation Class="PatchOperationConditional" MayRequire="Ludeon.RimWorld.Royalty">
+	<xpath>Defs/RoyalTitleDef/bedroomRequirements/li[@Class="RoomRequirement_ThingAnyOf"]/things[li="SlabDoubleBed"]</xpath>
+	<match Class="PatchOperationInsert">
+		<xpath>Defs/RoyalTitleDef/bedroomRequirements/li[@Class="RoomRequirement_ThingAnyOf"]/things/li[text()="SlabDoubleBed"]</xpath>
+		<order>Append</order>
+		<value>
+			<li>SlabTripleBed</li>
+			<li>SlabQuadBed</li>
+		</value>
+	</match>
+</Operation>
+	
+</Patch>
