@@ -50,12 +50,12 @@
         </li>
         </operations>
         <li Class="PatchOperationInsert">
-			<xpath>Defs/MemeDef[defName = "PainIsVirtue"]/addDesignators/li[text()="SlabDoubleBed"]</xpath>
+	    <xpath>Defs/MemeDef[defName = "PainIsVirtue"]/addDesignators/li[text()="SlabDoubleBed"]</xpath>
             <order>Append</order>
-			<value>
-			    <li>SlabTripleBed</li>
-				<li>SlabQuadBed</li>
-			</value>
-			</li>
+	    <value>
+	        <li>SlabTripleBed</li>
+		<li>SlabQuadBed</li>
+	    </value>
+	</li>
     </Operation>
 </Patch>
