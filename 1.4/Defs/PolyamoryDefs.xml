@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  <!--============================== Polyamory Beds (Vanilla Edition) ==============================-->
+
+  <!-- Sleeping Spots -->  
+  <ThingDef ParentName="SleepingSpotBase">
+    <defName>TripleSleepingSpot</defName>
+    <label>double sleeping spot</label>
+    <description>Designates a spot on the ground where three people should sleep together. Not comfortable.</description>
+    <graphicData>
+      <texPath>Spot3/Spot3</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(5,4)</drawSize>
+    </graphicData>
+    <size>(3,2)</size>
+  </ThingDef>
+  
+  <ThingDef ParentName="SleepingSpotBase">
+    <defName>QuadSleepingSpot</defName>
+    <label>quadra sleeping spot</label>
+    <description>Designates a spot on the ground where four people should sleep together. Not comfortable.</description>
+    <graphicData>
+      <texPath>Spot4/Spot4</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(6,4)</drawSize>
+    </graphicData>
+    <size>(4,2)</size>
+  </ThingDef>
+
+  <!-- Bedrolls --> 
+  <ThingDef ParentName="BedrollBase">
+    <defName>BedrollTriple</defName>
+    <label>triple bedroll</label>
+    <description>A simple triple-wide bed that lays on the floor, usually made of cloth or leather, often lined with fur. It is lightweight and can be rolled up for easy transport, but it is not quite as comfortable as a typical bed. Caravans can use bedrolls while traveling for better sleep.</description>
+    <graphicData>
+      <texPath>Bedroll3/Bedroll3</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(3,2)</drawSize>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>125</MaxHitPoints>
+      <Mass>6.5</Mass>
+      <WorkToBuild>1600</WorkToBuild>
+    </statBases>
+    <size>(3,2)</size>
+    <costStuffCount>130</costStuffCount>
+  </ThingDef>
+  
+  <ThingDef ParentName="BedrollBase">
+    <defName>BedrollQuad</defName>
+    <label>quadra bedroll</label>
+    <description>A simple quadra-wide bed that lays on the floor, usually made of cloth or leather, often lined with fur. It is lightweight and can be rolled up for easy transport, but it is not quite as comfortable as a typical bed. Caravans can use bedrolls while traveling for better sleep.</description>
+    <graphicData>
+      <texPath>Bedroll4/Bedroll4</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(4,2)</drawSize>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>150</MaxHitPoints>
+      <Mass>8.5</Mass>
+      <WorkToBuild>2100</WorkToBuild>
+    </statBases>
+    <size>(4,2)</size>
+    <costStuffCount>175</costStuffCount>
+  </ThingDef>
+
+  <!-- Regular Beds -->
+
+  <ThingDef ParentName="DoubleBed">
+    <defName>TripleBed</defName>
+    <label>triple bed</label>
+    <description>A simple triple-wide bed that fits three people.</description>
+    <graphicData>
+      <texPath>Bed3/Bed3</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(3.05,2.05)</drawSize>
+      <damageData>
+        <rect>(0,0.05,3,1.95)</rect>
+      </damageData>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>260</MaxHitPoints>
+      <Mass>70</Mass>
+      <Beauty>3</Beauty>
+      <WorkToBuild>2200</WorkToBuild>
+    </statBases>
+    <size>(3,2)</size>
+    <costStuffCount>125</costStuffCount>
+  </ThingDef>
+
+  <ThingDef ParentName="DoubleBed">
+    <defName>QuadBed</defName>
+    <label>quadra bed</label>
+    <description>A simple quadra-wide bed that fits four people.</description>
+    <graphicData>
+      <texPath>Bed4/Bed4</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(4.05,2.05)</drawSize>
+      <damageData>
+        <rect>(0,0.05,4,1.95)</rect>
+      </damageData>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>320</MaxHitPoints>
+      <Mass>90</Mass>
+      <Beauty>4</Beauty>
+      <WorkToBuild>2900</WorkToBuild>
+    </statBases>
+    <size>(4,2)</size>
+    <costStuffCount>165</costStuffCount>
+  </ThingDef>
+  
+  <!-- Royal Beds -->
+
+  <ThingDef ParentName="RoyalBedBase">
+    <defName>TripleRoyalBed</defName>
+    <label>triple royal bed</label>
+    <description>A luxurious gold-inlaid bed fit for the highborn. Very comfy and beautiful, it is a work of art in itself. Fits three.</description>
+    <graphicData>
+      <texPath>RBed3/RBed3</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(3.05,2.05)</drawSize>
+      <damageData>
+        <rect>(0,0.05,3,1.95)</rect>
+      </damageData>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>260</MaxHitPoints>
+      <Mass>90</Mass>
+      <Beauty>80</Beauty>
+      <WorkToBuild>72000</WorkToBuild>
+    </statBases>
+    <size>(3,2)</size>
+    <costStuffCount>150</costStuffCount>
+    <costList>
+      <Gold>75</Gold>
+    </costList>
+  </ThingDef>
+
+  <ThingDef ParentName="RoyalBedBase">
+    <defName>QuadRoyalBed</defName>
+    <label>quadra royal bed</label>
+    <description>A luxurious gold-inlaid bed fit for the highborn. Very comfy and beautiful, it is a work of art in itself. Fits four.</description>
+    <graphicData>
+      <texPath>RBed4/RBed4</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(4.05,2.05)</drawSize>
+      <damageData>
+        <rect>(0,0.05,4,1.95)</rect>
+      </damageData>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>320</MaxHitPoints>
+      <Mass>120</Mass>
+      <Beauty>85</Beauty>
+      <WorkToBuild>94000</WorkToBuild>
+    </statBases>
+    <size>(4,2)</size>
+    <costStuffCount>200</costStuffCount>
+    <costList>
+      <Gold>100</Gold>
+    </costList>
+  </ThingDef>
+ 
+  <ThingDef ParentName="RoyalBedBase">
+    <defName>PentaRoyalBed</defName>
+    <label>penta royal bed</label>
+    <description>A luxurious gold-inlaid bed fit for the highborn. Very comfy and beautiful, it is a work of art in itself. Fits five.</description>
+    <graphicData>
+      <texPath>RBed5/RBed5</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(5.05,2.05)</drawSize>
+      <damageData>
+        <rect>(0,0.05,5,1.95)</rect>
+      </damageData>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>380</MaxHitPoints>
+      <Mass>150</Mass>
+      <Beauty>90</Beauty>
+      <WorkToBuild>116000</WorkToBuild>
+    </statBases>
+    <size>(5,2)</size>
+    <costStuffCount>250</costStuffCount>
+    <costList>
+      <Gold>125</Gold>
+    </costList>
+  </ThingDef>
+
+  <!-- Slab Beds -->
+
+  <ThingDef ParentName="SlabBedBase" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>SlabTripleBed</defName>
+    <label>slab triple bed</label>
+    <description>A slab of hard material made to sleep on. Slab beds are uncomfortable, but some see their use as a demonstration of moral good. This one is wide enough to fit three people.</description>
+    <graphicData Inherit="False">
+      <texPath>Slab3/Slab3</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(3.05,2.05)</drawSize>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>260</MaxHitPoints>
+      <Mass>70</Mass>
+      <WorkToBuild>1100</WorkToBuild>
+    </statBases>
+    <size>(3,2)</size>
+    <costStuffCount>140</costStuffCount>
+  </ThingDef>
+
+  <ThingDef ParentName="SlabBedBase" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>SlabQuadBed</defName>
+    <label>slab quad bed</label>
+    <description>A slab of hard material made to sleep on. Slab beds are uncomfortable, but some see their use as a demonstration of moral good. This one is wide enough to fit four people.</description>
+    <graphicData Inherit="False">
+      <texPath>Slab4/Slab4</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(4.05,2.05)</drawSize>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>320</MaxHitPoints>
+      <Mass>90</Mass>
+      <WorkToBuild>1450</WorkToBuild>
+    </statBases>
+    <size>(4,2)</size>
+    <costStuffCount>195</costStuffCount>
+  </ThingDef>
+</Defs>
