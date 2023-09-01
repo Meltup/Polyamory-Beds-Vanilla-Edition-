@@ -68,9 +68,33 @@
     <costStuffCount>175</costStuffCount>
   </ThingDef>
 
-  <!-- Regular Beds -->
+  <!-- Abstract -->
+  <ThingDef Name="PolyBed" ParentName="BasicBedBase" Abstract="True">
+    <statBases>
+      <BedRestEffectiveness>1</BedRestEffectiveness>
+      <Comfort>0.75</Comfort>
+    </statBases>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <leaveResourcesWhenKilled>True</leaveResourcesWhenKilled>
+    <designationHotKey>Misc3</designationHotKey>
+    <building>
+      <paintable>true</paintable>
+    </building>
+    <uiOrder>2004</uiOrder>
+  </ThingDef>
+  
+  <ThingDef Name="PolyBedRoyal" ParentName="PolyBed" Abstract="True">
+    <statBases>
+      <BedRestEffectiveness>1.05</BedRestEffectiveness>
+      <Comfort>0.90</Comfort>
+    </statBases>
+    <designationHotKey>Misc4</designationHotKey>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+    <uiOrder>2006</uiOrder>
+  </ThingDef>
 
-  <ThingDef ParentName="DoubleBed">
+  <!-- Regular Beds -->
+  <ThingDef ParentName="PolyBed">
     <defName>TripleBed</defName>
     <label>triple bed</label>
     <description>A simple triple-wide bed that fits three people.</description>
@@ -93,7 +117,7 @@
     <costStuffCount>125</costStuffCount>
   </ThingDef>
 
-  <ThingDef ParentName="DoubleBed">
+  <ThingDef ParentName="PolyBed">
     <defName>QuadBed</defName>
     <label>quadra bed</label>
     <description>A simple quadra-wide bed that fits four people.</description>
@@ -118,7 +142,7 @@
   
   <!-- Royal Beds -->
 
-  <ThingDef ParentName="RoyalBedBase">
+  <ThingDef ParentName="PolyBedRoyal">
     <defName>TripleRoyalBed</defName>
     <label>triple royal bed</label>
     <description>A luxurious gold-inlaid bed fit for the highborn. Very comfy and beautiful, it is a work of art in itself. Fits three.</description>
@@ -144,7 +168,7 @@
     </costList>
   </ThingDef>
 
-  <ThingDef ParentName="RoyalBedBase">
+  <ThingDef ParentName="PolyBedRoyal">
     <defName>QuadRoyalBed</defName>
     <label>quadra royal bed</label>
     <description>A luxurious gold-inlaid bed fit for the highborn. Very comfy and beautiful, it is a work of art in itself. Fits four.</description>
@@ -170,7 +194,7 @@
     </costList>
   </ThingDef>
  
-  <ThingDef ParentName="RoyalBedBase">
+  <ThingDef ParentName="PolyBedRoyal">
     <defName>PentaRoyalBed</defName>
     <label>penta royal bed</label>
     <description>A luxurious gold-inlaid bed fit for the highborn. Very comfy and beautiful, it is a work of art in itself. Fits five.</description>
