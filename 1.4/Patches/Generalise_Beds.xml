@@ -22,6 +22,7 @@
         </operations>
     </Operation>
     <!-- Normal Bed: Double Beds are already named for inheritance, just set UI order -->
+    <!-- No use of this one because regular beds have a propper base now
     <Operation Class="PatchOperationSequence">
         <operations>
         <li Class="PatchOperationRemove">
@@ -34,7 +35,9 @@
         </li>
         </operations>
     </Operation>
+    -->
     <!-- Royal Bed: Make into base, set UI order -->
+    <!-- No use of this one because royal beds have a propper base now
     <Operation Class="PatchOperationSequence">
         <operations>
         <li Class="PatchOperationAttributeSet">
@@ -52,6 +55,7 @@
         </li>
         </operations>
     </Operation>
+    -->
     <!-- Slab Bed: Use Slab Double Bed as base, set UI order. Also add designators to MemeDef. -->
     <Operation Class="PatchOperationSequence" MayRequire="Ludeon.RimWorld.Ideology">
         <operations>
